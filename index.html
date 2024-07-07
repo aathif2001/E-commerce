@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/videostyles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+    <img src="./images/home.png" style="width: 100%;" alt="">
+
+    <header>
+
+        <a href="" class="logo" style="text-decoration: none;">LOGO </a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">MENU</label>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" style="text-decoration: none;">HOME +</a>
+                    <ul>
+                        <li><a href="#trend" style="text-decoration: none;">TRENDING</a></li>
+                        <li><a href="#discount" style="text-decoration: none;">DISCOUNT</a></li>
+                        <li><a href="#steps" style="text-decoration: none;">STEPS</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="Products.html" style="text-decoration: none;">PRODUCTS +</a>
+                    <ul>
+                        <li><a href="" style="text-decoration: none;">Section 1</a></li>
+                        <li><a href="" style="text-decoration: none;">Section 2</a></li>
+                        <li><a href="" style="text-decoration: none;">Section 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" style="text-decoration: none;">CONTACT</a></li>
+                <li><a href="aboutus.html" style="text-decoration: none;">ABOUT US</a></li>
+                <li><a href="Health Benefits.html" style="text-decoration: none;">HEALTH BENEFITS</a></li>
+                <li><a href="basket.html" style="text-decoration: none;">BASKET</a></li>
+                <li><a><i class="bx bx-shopping-bag" id="cart-shop" style="text-decoration: none;"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart -->
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./images/cart1.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">DESK 1</h3>
+                    <span class="cart__price">$1200</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./images/cart2.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">DESK 2</h3>
+                    <span class="cart__price">$570</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./images/cart3.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">DESK 3</h3>
+                    <span class="cart__price">$600</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+
+            </article>
+
+            <div class="cart__prices">
+                <span class="cart__prices-item">3 items</span>
+                <span class="cart__prices-total">$2370</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <main class="main">
+        
+
+        <!-- VIDEO BACKGROUND -->
+        <div class="header-change">
+
+            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+            <div class="overlay"></div>
+          
+            <!-- The HTML5 video element that will create the background video on the header -->
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width: 100%;" class="video-overlay">
+              <source src="./videos/standingdesk.mp4" type="video/mp4">
+            </video>
+          
+            <!-- The header content -->
+            <div class="container h-100">
+              <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                  <h1 class="display-3" style="color: #fff;">STANDING DESK</h1>
+                  <p class="lead mb-0">Welcome to Elevate Desks! Ready to rise up? </p>
+                </div>
+                <div class=" explore_btn">
+                    <button type="button" class="btn btn-outline-light" 
+                    style=" font-size: 35px; border-radius: 15px; text-decoration: none;">BUY NOW</button> 
+                </div>
+              </div>
+            </div>
+            
+        </div>
+
+
+        
+        <!-- HOME -->
+        <!-- Swiper 1 -->
+        <section class="home container" id="trend">
+            <div class="swiper home-swiper swipe-back">
+                <div class="swiper-wrapper">
+                    
+                    <!-- home swiper 1 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide1.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 1</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details 
+                                        <i class="bx bx-right-arrow-alt button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- home swiper 2 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide2.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 2</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#2 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- home swiper 3 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide3.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 3</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#3 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- Swiper 2 -->
+        <section class="home container">
+            <div class="swiper home-swiper swipe-back">
+                <div class="swiper-wrapper">
+                    <!-- home swiper 1 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide1.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 1</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- home swiper 2 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide2.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 2</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#2 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- home swiper 3 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="./images/slide3.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">The DESK 3</h4>
+                                    <span class="home__details-subtitle">WOOD</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#3 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!! </h1>
+                                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Quod delectus, reprehenderit similique iure inventore </p>
+
+                                <div class="home__buttons">
+                                    <a href="deatails.html" class="button" style="text-decoration: none;">Buy Now</a>
+                                    <a href="deatails.html" class="button--link button--flex" style="text-decoration: none;">
+                                        View Details <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- DISCOUNT -->
+        <section class="discount section" id="discount">
+            <div class="discount__container container grid">
+                <img src="./images/discount1.png" alt="" class="discount__img">
+
+                <div class="discount__data">
+                    <h2 class="discount__title">50% Discount <br>On NEW Products</h2>
+                    <a href="#" class="button" style="text-decoration: none;">GO TO NEW</a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW ARRIVALS (Type a new section if you want) -->
+
+        <!-- STEPS -->
+        <section class="steps section container" id="steps">
+            <div class="steps__bg">
+                <h2 class="section__title">How to Order Product <br> from STANDING DESK</h2>
+                <div class="steps__container grid">
+                    <!-- STEP CARD 01 -->
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Choose Desk</h3>
+                        <p class="steps__card-description">
+                            We have several varieties of products you can choose from.
+                        </p>
+                    </div>
+
+                    <!-- STEP CARD 02 -->
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Make the Order</h3>
+                        <p class="steps__card-description">
+                            After the order is made the shipping is the next.
+                        </p>
+                    </div>
+
+                    <!-- STEP CARD 03 -->
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Get the product</h3>
+                        <p class="steps__card-description">
+                            You will receive the product to your doorstep.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3 style="color: #fff;">STANDING DESK</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, hic error cum est nihil corporis temporibus recusandae fugit tempora dolor nulla exercitationem. Maxime error, vero praesentium veritatis consectetur amet suscipit.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024 STANDING DESK. Designed by <span>Aathif</span></p>
+        </div>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>    
+
+    <script src="./Js/swiper-bundle.min.js"></script>
+    <script src="./Js/scripts.js"></script>
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

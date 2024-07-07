@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="./css/productstyles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+    <img src="./images/products.png" style="width: 100%;" alt="">
+
+    <header>
+        <a href="" class="logo" style="text-decoration: none;">LOGO </a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">MENU</label>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" style="text-decoration: none;">HOME +</a>
+                    <ul>
+                        <li><a href="./index.html#trend" style="text-decoration: none;">TRENDING</a></li>
+                        <li><a href="./index.html#discount" style="text-decoration: none;">DISCOUNT</a></li>
+                        <li><a href="./index.html#steps" style="text-decoration: none;">STEPS</a></li>
+                    </ul>
+                </li>
+                <li><a href="Products.html" style="text-decoration: none;">PRODUCTS +</a>
+                    <ul>
+                        <li><a href="" style="text-decoration: none;">Section 1</a></li>
+                        <li><a href="" style="text-decoration: none;">Section 2</a></li>
+                        <li><a href="" style="text-decoration: none;">Section 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" style="text-decoration: none;">CONTACT</a></li>
+                <li><a href="aboutus.html" style="text-decoration: none;">ABOUT US</a></li>
+                <li><a href="Health Benefits.html" style="text-decoration: none;">HEALTH BENEFITS</a></li>
+                <li><a href="basket.html" style="text-decoration: none;">BASKET</a></li>
+                <li>
+                    <a>
+                        <i class="bx bx-shopping-bag" id="cart-shop" style="text-decoration: none; font-size: 25px;">
+                            <span class="quantity">0</span>
+                        </i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container" style="row-gap: 2rem;">
+            <div class="plistcart">
+            </div>
+
+            <div class="cart__prices">
+                <span class="cart__prices-total"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="plist" style="align-items: center;"></div>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3 style="color: #fff;">STANDING DESK</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, hic error cum est nihil corporis temporibus recusandae fugit tempora dolor nulla exercitationem. Maxime error, vero praesentium veritatis consectetur amet suscipit.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024 STANDING DESK. Designed by <span>Aathif</span></p>
+        </div>
+    </footer>
+    
+    <script src="./Js/swiper-bundle.min.js"></script>
+    <script src="./Js/scripts.js"></script>
+    <script src="./Js/productjs.js"></script>
+    
+</body>
+</html>

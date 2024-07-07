@@ -1,0 +1,761 @@
+/* cart extra code */
+
+:root {
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    --first-color: #cda083;
+    --first-color-alt: #cda183d7;
+    --title-color: #333;
+    --scroll-bar-color: hsl(250,12%, 90%);
+    --scroll-thumb-color: hsl(250,12%, 80%);
+    --container-color: rgba(255, 255, 255);
+
+    --small-font-size: .875rem;
+    --normal-font-size: 1rem;
+    --biggest-font-size: 4rem;
+
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+
+    --mb-0-5: 0.5rem;
+    --mb-1-0: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    --font-medium: 500;
+    --font-bold: 600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0; left: 0; right:0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 10px #000;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Home Extra Code */
+
+.grid{
+    display: grid;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.section{
+    padding: 7rem 0 2rem;
+}
+
+.container{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* css for logo */
+
+header .logo{
+    font-weight: bolder;
+    color: #333;
+    font-size: 25px;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+
+
+header .navbar ul li a:hover{
+    color: rgba(74,69,91);
+    background: rgba(247,241,191, 0.9);
+    font-weight: bolder;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.3);
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top:1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    display: none;
+}
+
+/* Footer Stylings Below */
+/* in the main code the footer position was absolute i changed it for the my page to align */
+
+footer{
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    background: rgba(39, 37, 37, 0.884);
+    color: rgb(226, 212, 212);
+    position: relative;
+    bottom: 0;
+    z-index: 999;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: rgb(226, 212, 212);
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: rgba(39, 37, 37, 0.466);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: capitalize;
+    opacity: 0.4;
+    font-weight: 200;
+}
+
+
+/* ------------ CART --------------- */
+/* Here the position is typed as fixed but it ruins the page therefore i changed to relative */
+.cart {
+    position: fixed;
+    background-color: var(--container-color);
+    /* consider about this z index was var(--z-fixed)  i changed to 1001*/
+    z-index: 1001;
+    width: 420px;
+    box-shadow: -2px 0 4px ;
+    height: 100% ;
+    top: 0; right: -100%;
+    padding: 3.5rem 2rem;
+    transition: 0.4s;
+
+    
+}
+
+.cart__title-center{
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+.cart__close{
+    font-size: 2rem;
+    color: var(--title-color);
+    position: absolute;
+    top: 1.25rem; right: 0.9rem;
+    cursor: pointer;
+}
+
+.cart__container{  
+    display: grid;
+}
+
+.cart__card{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.cart__box{
+    background-color: var(--container-color);
+    padding: .75rem 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.cart__img{
+    width: 85px;
+}
+
+.cart__title{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.cart__price{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-1-5);
+}
+
+.cart__amount,
+.cart__amount-content{
+    display: flex;
+    align-items: center;
+}
+
+.cart__amount{
+    column-gap: 3rem;
+}
+
+.cart__amount-content{
+    column-gap: 1rem;
+}
+
+.cart__amount-box{
+    display: inline-flex;
+    padding: .25rem;
+    background: var(--container-color);
+    cursor: pointer;
+}
+
+.cart__amount-trash{
+    font-size: 1.15rem ;
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.cart__prices{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart__prices-item,
+.cart__prices-total{
+    color: var(--title-color);
+}
+
+.cart__prices-item{
+    font-size: var(--small-font-size);
+}
+
+.cart__prices-total{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+/* SHOW CART */
+.show-cart{
+    right: 0;
+}
+
+/* HOME SECTION */
+
+.home__content{
+    padding: 9rem 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+
+.home__group{
+    display: grid;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.home__img{
+    height: 420px;
+    transform: translateY(-3rem);
+    justify-self: center;
+}
+
+.home__indicator{
+    width: 8px;
+    height: 8px;
+    background: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15%;
+    left:45%
+}
+
+.home__indicator::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 75px;
+    background: var(--title-color);
+    top: 0;
+    right: 45%;
+}
+
+.home__details-img{
+    position: absolute;
+    bottom: 0;
+    right: 58%;
+}
+
+
+.home__details-title,
+.home__details-subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    text-align: right;
+}
+
+.home_subtitle{
+    font-size: var(--h3-font-size);
+    text-transform: uppercase;
+    margin-bottom: var(--mb-1-0);
+
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    line-height: 109%;
+    margin-bottom: var(--mb-1-5);
+}
+
+
+/* in the original code the padding was 2rem */
+.home__description{
+    margin-bottom: var(--mb-2-5);
+    padding-right: 2rem;
+}
+
+.home__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* Button */
+.button{
+    display: inline-block;
+    background: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+}
+
+.button:hover{
+    background: var(--first-color-alt);
+}
+
+.button__icon{
+    font-size: 1.25rem;
+}
+
+.button--link{
+    color: var(--title-color);
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-right: 40px;
+}
+
+/* Swiper - Background */
+
+.swipe-back{
+    background: #ffffff6c;;
+    margin-top: 50px;
+    /* padding-top: 50px; */
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Discount */
+.discount__container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 7rem;
+    background-color: #ffffffab ;
+    padding: 3rem 0;
+    border-radius: 3rem;
+}
+
+.discount__img{
+    width: 200px;
+}
+
+.discount__data{
+    padding-left: 6rem;
+    text-align: center;
+}
+
+.discount__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2-5);
+}
+
+/* STEPS */
+
+.steps__bg{
+    background-color: #ffffffab ;
+    padding: 3.5rem 2.5rem;
+    border-radius: 1rem;
+}
+
+.steps__container{
+    grid-template-columns: repeat(3, 1fr) ;
+    column-gap: 2rem;
+    padding-top: 1rem;
+}
+
+.steps__card{
+    background-color: #dfdfdfab;
+    padding: 2.5rem 3rem 2rem 1.5rem ;
+    border-radius: 1rem;
+}
+
+.steps__card-number{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1-5);
+    transition: 0.3s;
+}
+
+.steps__card-title{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.steps__card-description{
+    font-size: var(--small-font-size);
+}
+
+.steps__card:hover .steps__card-number{
+    transform: translateY(-0.25rem);
+}
+
+/* SCROLL UP */
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -30%;
+    background: var(--first-color);
+    border-radius: 0.4rem;
+    display: inline-flex;
+    padding: .25rem;
+    z-index: 1002;
+    opacity: 0.8;
+    transition: 0.4s;   
+    text-decoration: none;
+}
+
+.scrollup:hover{
+    opacity: 1;
+}
+
+.scrollup__icon{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.show-scroll{
+    bottom: 3rem;
+}
+
+
+
+@media(max-width:1253px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: rgba(255, 255, 255);
+        backdrop-filter: blur(5px);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: rgba(172, 37, 37, 0.021);
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+    /* SWIPER - Background*/
+
+    .swipe-back{
+        background: transparent;
+        margin-top: 50px;
+        /* padding-top: 50px; */
+        width: auto;
+        border-radius: 20px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .container{
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+    
+    .home__img{
+        height: 300px;
+        transform: translateY(0);
+    }
+
+    .home__content{
+        padding: 8rem 0 2rem;
+    }
+
+    .home__indicator{
+        bottom: initial;
+        left: initial;
+        top: 7rem;
+        right: 2rem;
+    }
+
+    .home__indicator::after{
+        height: 48px;
+        top: -3rem;
+    }
+
+    .home__details-img{
+        right: 0.5rem;
+        bottom: initial;
+    }
+
+    .home__description{
+        padding-right: 0;
+    }
+
+    .discount__container{
+        column-gap: 3rem;
+    }
+
+    .steps__bg{
+        padding: 3rem 2rem 2rem;
+    }
+
+    .steps__container{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+}
+
+/* Medium Sized Devices */
+@media(max-width:767px){
+
+    .home__content{
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        padding: 0;
+    }
+
+    .section{
+        padding: 4.5rem 0rem 2rem;
+    }
+
+    .home__content{
+        padding: 0;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    .home__img{
+        height: 250px;
+    }
+
+    .home__title{
+        margin-bottom: var(--mb-1-0);
+    }
+
+    .home__description{
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .discount__container{
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        padding: 2.5rem 0rem 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .discount__img{
+        justify-self: center;
+        order: 1;
+    }
+
+    .discount__data{
+        padding-left: 0;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .steps__container{
+        grid-template-columns: 1fr;
+    }
+
+    .steps__bg{
+        padding: 3rem 2rem 2rem;
+    }
+
+    .cart{
+        width: 100%;
+    }
+}
+
+/* Small Devices */
+@media(max-width:320px){
+
+    .container{
+        margin-left: var(--mb-1-0);
+        margin-right: var(--mb-1-0);
+    }
+
+    .home__img{
+        height: 200px;
+    }
+
+    .home__buttons{
+        flex-direction: column;
+        width: max-content;
+        row-gap: 1rem;
+    }
+
+    .steps__bg{
+        padding: 2rem 1rem;
+    }
+
+    .steps__card{
+        padding: 1.5rem;
+    }
+
+
+
+}
